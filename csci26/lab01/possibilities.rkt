@@ -16,7 +16,7 @@
      ;; to get everything except the first element, use rest
      (define rest-of-vars (rest unchosen-vars))
 
-     ;; try the tree possibilities for the fst variable
+     ;; try the tree possibilities for the var
      ;; cons adds an element to the front of a list (and it also makes pairs)
      (print-possibilities rest-of-vars (cons `(,var "A") chosen-vars)) #| try A |#
      (print-possibilities rest-of-vars (cons `(,var "B") chosen-vars)) #| try B |#
@@ -29,4 +29,4 @@
 (print-possibilities '("x" "y" "z") '())
 
 ;; could also call the prettier version with:
-;; (print-possibilities-prettier '("x" "y" "z" "p" "q"))
+;; (print-possibilities-prettier '("x" "y" "z"))
